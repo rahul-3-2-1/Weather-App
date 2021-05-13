@@ -41,7 +41,7 @@ const Weather=()=>{
         hr=hr===0?hr+12:hr>12&&hr<23?hr-12:hr;
 
         const tm=`${hr}:${mt} ${period}`;
-        const day=  days[dt.getDay()];
+        const day=  days[dt.getDay()-1];
         // const space= <tr/>;
         
 
@@ -153,7 +153,7 @@ const Weather=()=>{
         <>
         
             <div className=" d-flex justify-content-center">
-                <div className="form-div wt-div mt-5 bg-dark bg-gradient">
+                <div className="form-div wt-div  bg-dark bg-gradient">
                         <form className="position" onSubmit={fetchData}>
                         <input className="bg-dark bg-gradient w-100 d-block style-input" type="text" onChange={update} value={city}placeholder="Enter your city " />
                         <input   type="submit" value="click Here" className="wth-btn"/>
